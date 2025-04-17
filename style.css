@@ -17,7 +17,7 @@ body{
     font-size: 50px;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 0px;
 
 }
 .options{
@@ -39,4 +39,14 @@ button{
 button:hover{
     background-color: rgb(72, 193, 98);
     transition: 0.5s;
+}
+.score{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    /* margin-top: 40px; */
+}
+.selected {
+    background-color: #4CAF50;
+    color: white;
 }
