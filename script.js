@@ -1,7 +1,7 @@
 let question = document.querySelector('.question');
 let options = document.querySelectorAll('.options button');
 let submitButton = document.querySelector('.submit');
-
+let displayScore = document.querySelector('.score');
 let questionNumber = 0;
 let score = 0;
 let optionSelected = null;
@@ -31,8 +31,11 @@ options.forEach((element, index)=>{
     
 })
 function showScore (){
-    document.querySelector('.main').innerHTML = `<h2> Quiz is completed </h2> 
+    document.querySelector('.main').innerHTML = `
+    <div class= "score"> your previous score is ${score}</div>
+    <h2> Quiz is completed </h2> 
     <p> your score is ${score}/10`
+    displayScore.innerHTML = score;
 }
 submitButton.addEventListener('click',()=>{
      if(optionSelected === null){

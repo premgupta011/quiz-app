@@ -4,11 +4,7 @@ const allQuestions = [
       "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
       "answer": "O(log n)"
     },
-    {
-      "question": "Which HTML tag is used to create a hyperlink?",
-      "options": ["<link>", "<a>", "<href>", "<hyperlink>"],
-      "answer": "<a>"
-    },
+    
     {
       "question": "Which of the following data structures uses LIFO order?",
       "options": ["Queue", "Array", "Stack", "Linked List"],
@@ -39,11 +35,7 @@ const allQuestions = [
       "options": ["Bubble Sort", "Selection Sort", "Insertion Sort", "Quick Sort"],
       "answer": "Insertion Sort"
     },
-    {
-      "question": "Which tag is used to insert an image in HTML?",
-      "options": ["<image>", "<img>", "<pic>", "<src>"],
-      "answer": "<img>"
-    },
+    
     {
       "question": "What does CSS stand for?",
       "options": ["Cascading Style Sheets", "Computer Style Sheets", "Creative Style System", "Colorful Style Sheets"],

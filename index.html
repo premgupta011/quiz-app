@@ -6,20 +6,21 @@
     <title>Document</title>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+   
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="main">
-        <div class="score"><p>0</p></div>
-        <div class="question">This is the question</div>
-        <div class="options">
-            <button class="option-1">Option 1</button>
-            <button class="option-2"> option 2</button>
-            <button class="option-3">option 3</button>
-            <button class="option-4">option 4</button>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4">
+    <div class="main w-full max-w-md bg-grey-800 p-6 rounded-2xl shadow-xl text-center">
+        <div class="score text-right text-sm text-grey-400 mb-2"><p>0</p></div>
+        <div class="question text-xl font-semibold mb-6">This is the question</div>
+        <div class="options flex flex-col gap-4 mb-6">
+            <button class="option-1 py-2 px-4 bg-grey-700 rounded-lg hover:bg-blue-600 transition-all">Option 1</button>
+            <button class="option-2 py-2 px-4 bg-grey-700 rounded-lg hover:bg-blue-600 transition-all"> option 2</button>
+            <button class="option-3 py-2 px-4 bg-grey-700 rounded-lg hover:bg-blue-600 transition-all">option 3</button>
+            <button class="option-4 py-2 px-4 bg-grey-700 rounded-lg hover:bg-blue-600 transition-all">option 4</button>
         </div>
-        <div class="submit"><button>submit</button></div>
+        <div class="submit"><button class="px-6 bg-green-600 rounded-lg hover:bg-green-700 transition-all" >submit</button></div>
     </div>
 
 
