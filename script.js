@@ -2,7 +2,7 @@ let question = document.querySelector('.question');
 let options = document.querySelectorAll('.options button');
 let submitButton = document.querySelector('.submit');
 let displayScore = document.querySelector('.score');
-let questionNumber = 0;
+let questionNumber = 1;
 let score = 0;
 let optionSelected = null;
 
@@ -30,13 +30,29 @@ options.forEach((element, index)=>{
     })
     
 })
-function showScore (){
-    document.querySelector('.main').innerHTML = `
-    <div class= "score"> your previous score is ${score}</div>
-    <h2> Quiz is completed </h2> 
-    <p> your score is ${score}/10`
-    displayScore.innerHTML = score;
+function showScore() {
+    const main = document.querySelector('.main');
+
+    main.innerHTML = `
+        <div class="score">Your previous score is ${score}</div>
+        <h2>Quiz is completed</h2> 
+        <p>Your score is ${score}/10</p>
+        <button class="restart py-2 px-4 bg-orange-700 rounded-lg hover:bg-blue-600 transition-all">Restart</button>
+    `;
+
+    // Add event listener AFTER the button is in the DOM
+    document.querySelector('.restart').addEventListener('click', () => {
+        // Reset values
+        questionNumber = 0;
+        score = 0;
+        optionSelected = null;
+
+        // Restore quiz UI from scratch or reload the page
+        window.location.reload(); // easiest option
+        // OR re-create full quiz UI if you want to do it manually
+    });
 }
+
 submitButton.addEventListener('click',()=>{
      if(optionSelected === null){
         return alert("Please choose and option!");
@@ -47,10 +63,11 @@ submitButton.addEventListener('click',()=>{
     }
     
     questionNumber++;
+    displayScore.innerHTML = `Questions: ${questionNumber}/10`
     
     loadQuestion(questionNumber);
     optionSelected = null;
-    if(questionNumber === 11){
+    if(questionNumber === 10){
         showScore();
     }
 })
